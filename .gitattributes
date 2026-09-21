@@ -1,0 +1,5 @@
+# 기본은 LF 로 통일 (웹 프로젝트)
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
