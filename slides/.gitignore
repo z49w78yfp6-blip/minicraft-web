@@ -1,0 +1,20 @@
+# 최종 산출물: 언제든 다시 만들 수 있으므로 커밋하지 않는다
+output/
+!output/.gitkeep
+
+# 용량이 큰 자원
+assets/media/
+assets/fonts/
+archive/
+
+# PowerPoint 임시/잠금 파일
+~$*.pptx
+~$*.ppt
+*.tmp
+
+# OS / 에디터
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

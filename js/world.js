@@ -470,7 +470,11 @@
         geo.setIndex(g.i);
         geo.computeBoundingSphere();
         const m = new THREE.Mesh(geo, mat);
+        // 지오메트리는 청크 로컬 좌표(0~16) → 메시를 청크 원점으로 이동시킨다.
+        // (좌표를 월드 단위로 직접 넣지 않아 먼 거리에서도 정밀도가 유지된다)
+        m.position.set(bx, 0, bz);
         m.matrixAutoUpdate = false;
+        m.updateMatrix();          // position 을 행렬에 반영
         m.renderOrder = order;
         m.frustumCulled = true;
         meshes.push(m);

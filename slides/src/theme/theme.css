@@ -1,0 +1,38 @@
+/*
+ * 프로젝트 공통 테마
+ * 색·폰트·여백을 여기서 한 번만 정의하고 슬라이드에서 재사용합니다.
+ * 값을 바꾸면 전체 슬라이드에 반영되도록 하는 것이 목적입니다.
+ */
+
+:root {
+  /* 색 */
+  --color-bg: #ffffff;
+  --color-fg: #1a1a1a;
+  --color-accent: #2563eb;
+  --color-muted: #6b7280;
+
+  /* 폰트 */
+  --font-title: "Pretendard", "Malgun Gothic", sans-serif;
+  --font-body: "Pretendard", "Malgun Gothic", sans-serif;
+  --font-mono: "D2Coding", "Consolas", monospace;
+
+  /* 크기 (16:9 기준) */
+  --slide-width: 1280px;
+  --slide-height: 720px;
+  --space-unit: 16px;
+
+  /* 제목/본문 크기 */
+  --size-title: 56px;
+  --size-subtitle: 32px;
+  --size-body: 24px;
+  --size-caption: 16px;
+}
+
+/* 다크 테마를 쓰려면 이 블록만 교체하면 됩니다. */
+/*
+:root {
+  --color-bg: #0f172a;
+  --color-fg: #f8fafc;
+  --color-accent: #60a5fa;
+}
+*/
