@@ -87,3 +87,25 @@ vendor/three.min.js Three.js r147 (UMD)
 ```js
 const RENDER_DISTANCE = 6;   // 4 ~ 8
 ```
+
+## 배포 (GitHub Pages)
+
+이 저장소는 `main` 브랜치 루트를 그대로 GitHub Pages 로 서비스합니다.
+
+```bash
+git add -A
+git commit -m "설명"
+git push
+```
+
+> **캐시 주의**: GitHub Pages 는 정적 파일을 약 10분간 캐시합니다.
+> 게임 코드를 수정했다면 `index.html` 의 `?v=2` 숫자를 함께 올려 주세요.
+> (예: `js/main.js?v=3`) 또는 브라우저에서 `Ctrl + F5` 로 강력 새로고침.
+
+## 개발 메모
+
+청크 지오메트리는 **청크 로컬 좌표(0~16)** 로 만들고 `mesh.position` 으로
+청크 원점을 지정합니다. 좌표를 월드 단위로 직접 넣으면 먼 거리에서
+float32 정밀도가 떨어져 블록 사이에 틈이 생기기 때문입니다.
+(초기 버전에서 이 위치 지정이 빠져 모든 청크가 원점에 겹쳐 보이는 버그가 있었습니다)
+
